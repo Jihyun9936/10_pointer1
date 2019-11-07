@@ -27,7 +27,7 @@ void main(){
 	printf("%i, %i, %i\n", i, *pi, *pc);
 }*/
 
-/*Lab04*/
+/*Lab04
 void swap1 (int x, int y){
 	int temp;
 	temp = x;
@@ -50,4 +50,28 @@ main(){
 	
 	swap2(&a, &b);
 	printf("a : %i, b : %i\n", a, b);
+}*/
+
+/*Lab05*/
+main(){
+	int *ptr, i, avg, sum = 0;
+	int grade[5];
+	ptr = grade;
+	
+	for(i=0; i<5; i++){
+		printf("input value (%d) : ", i);
+		scanf("%d", ptr+i);
+	}
+	
+	for(i=0; i<5; i++)
+		printf("grade[%d] = %d\n", i, *(ptr+i));
+		
+	for (i=0; i<5; i++){
+		sum += *(ptr+i);
+	}
+	
+	avg = sum / i;
+	printf("average : %d", avg);
+		
+	return 0;
 }
